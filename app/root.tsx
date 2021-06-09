@@ -1,6 +1,6 @@
 import type { LinksFunction, LoaderFunction } from "remix";
 import { Meta, Links, Scripts, useRouteData, LiveReload } from "remix";
-import { Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 
 import stylesUrl from "./styles/global.css";
 
@@ -35,6 +35,11 @@ export default function App() {
   let data = useRouteData();
   return (
     <Document>
+      <nav>
+        <Link to="/">Home </Link>
+        <Link to="/foo">Foo </Link>
+        <Link to="/foo/bar">Bar</Link>
+      </nav>
       <Outlet />
       <footer>
         <p>This page was rendered at {data.date.toLocaleString()}</p>
