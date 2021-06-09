@@ -6,21 +6,25 @@
   "scripts": {
     "build": "remix build",
     "dev": "remix run",
-    "start": "remix-serve build"
+    "start": "remix-serve build",
+    "postinstall": "patch-package"
   },
   "dependencies": {
+    "@remix-run/node": "^0.17.5",
     "@remix-run/react": "^0.17.5",
+    "@remix-run/serve": "^0.17.5",
+    "patch-package": "^6.4.7",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-router-dom": "^6.0.0-beta.0",
-    "remix": "^0.17.5",
-    "@remix-run/serve": "^0.17.5",
-    "@remix-run/node": "^0.17.5"
+    "remix": "^0.17.5"
   },
   "devDependencies": {
     "@remix-run/dev": "^0.17.5",
     "@types/react": "^17.0.4",
     "@types/react-dom": "^17.0.4",
+    "@vanilla-extract/css": "^1.0.0",
+    "@vanilla-extract/esbuild-plugin": "^1.1.0",
     "typescript": "^4.1.2"
   },
   "engines": {
